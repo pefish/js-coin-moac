@@ -1,0 +1,44 @@
+{
+  "name": "js-coin-moac",
+  "version": "0.0.1",
+  "description": "moac tool of js",
+  "keywords": [
+    "common",
+    "js",
+    "tool"
+  ],
+  "homepage": "https://github.com/pefish/js-coin-moac",
+  "bugs": "https://github.com/pefish/js-coin-moac/issues",
+  "license": "MIT",
+  "author": "pefish",
+  "types": "./types/*.d.ts",
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pefish/js-coin-moac"
+  },
+  "scripts": {
+    "build": "tsc && yarn tslint",
+    "test": "mocha --timeout 6000 --require ts-node/register tests/*.test.js",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.7",
+    "babel-polyfill": "^6.26.0",
+    "p-js-utils": "^0.0.8",
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "chain3": "^0.1.18",
+    "ethereumjs-util": "^6.1.0",
+    "js-coin-eth": "^0.0.4",
+    "js-node-assist": "^0.5.8",
+    "p-js-error": "^0.0.4"
+  }
+}
