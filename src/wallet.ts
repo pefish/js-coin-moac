@@ -303,7 +303,7 @@ export default class WalletHelper extends EthWalletHelper {
       gasLimit: gasLimit.decimalToHexString_(),
       to: contractAddress,
       value: 0x00,
-      data: contract.transfer.getData(params[0], params[1])
+      data: contract.transfer.getData(params[0].toLowerCase(), params[1])
     }
 
     const signedTxHex = this.chain3.signTransaction(rawTx, privateKey)
@@ -313,3 +313,4 @@ export default class WalletHelper extends EthWalletHelper {
     }
   }
 }
+
