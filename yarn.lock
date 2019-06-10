@@ -51,6 +51,54 @@
     store "^2.0.12"
     websocket "^1.0.25"
 
+"@pefish/js-coin-eth@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@pefish/js-coin-eth/-/js-coin-eth-0.0.5.tgz#427160390b9ad3ca811fe91eddae9493b0b8c44c"
+  integrity sha512-/bZhygayFaAb5OQ30Krc7PHbXcl5RRjdCTMlnAKM9vNiMH6JS8aznezXrQfICiJ6F35wO8CDNTDRDK+Flf3iFg==
+  dependencies:
+    "@parity/api" "^4.0.3"
+    "@pefish/js-error" "^0.0.5"
+    "@pefish/js-node-assist" "^0.6.0"
+    "@pefish/js-util-httprequest" "^0.0.5"
+    bitcore-lib "^0.16.0"
+    bn.js "^4.11.8"
+    eth-crypto "^1.3.3"
+    ethereumjs-tx "^1.3.7"
+    ethereumjs-util "^6.1.0"
+    keythereum "^1.0.4"
+    web3 "^1.0.0-beta.46"
+
+"@pefish/js-error@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@pefish/js-error/-/js-error-0.0.5.tgz#be50104cb7e6cb115a31ccdc55dafcf09a65a4ec"
+  integrity sha512-Eypll4OykI0EWj61wx8/cVMVldGjiPJVic/KzK76z1RZiNN9Q2TF7DJif+qg7MBlGbJHAQZ77wIBv5x9fndxpw==
+
+"@pefish/js-helper-assert@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@pefish/js-helper-assert/-/js-helper-assert-0.0.2.tgz#5adfb94e9308f1b825cf16e1982cf687b8775037"
+  integrity sha512-y37Tr+gLYOzSwiqMEGJT/TlnHBM+CeHhGNjpSKnXhu8dgPdNDY4c3G6/8rvu+M5NBhvoeM+fSHvmU/bqZ6H8Lg==
+  dependencies:
+    bignumber.js "^8.1.1"
+    p-js-error "^0.0.4"
+
+"@pefish/js-node-assist@^0.6.0", "@pefish/js-node-assist@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@pefish/js-node-assist/-/js-node-assist-0.6.2.tgz#2797e7a85bedfb96112d4a9cc92413a7cecd975a"
+  integrity sha512-cW5yL/kpJpQ74GE8SkEZuWhD+wgP/IBxA72i5s1K2iWTPtVxabVChZJ/sadOlj2QKsy1H+2Jjs382gvb4emziQ==
+  dependencies:
+    "@pefish/js-error" "^0.0.5"
+    "@pefish/js-helper-assert" "^0.0.2"
+    bignumber.js "^8.1.1"
+
+"@pefish/js-util-httprequest@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@pefish/js-util-httprequest/-/js-util-httprequest-0.0.5.tgz#1b4a4552a55dba26d792537f605470a3e741fb67"
+  integrity sha512-S+HFbkIR4KR0yCy5VR468R1BoAeCsb0dO5gfhcwLuCcdBw4GJ9UB24+O1Mt/xCyN8B7Rlh0B0mvX64xaGKhkpw==
+  dependencies:
+    js-node-assist "^0.5.8"
+    p-js-error "^0.0.4"
+    restler "^3.4.0"
+
 "@types/bn.js@4.11.5", "@types/bn.js@^4.11.4":
   version "4.11.5"
   resolved "https://registry.yarnpkg.com/@types/bn.js/-/bn.js-4.11.5.tgz#40e36197433f78f807524ec623afcf0169ac81dc"
@@ -121,16 +169,7 @@ asn1.js@^4.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
-babel-polyfill@^6.26.0:
-  version "6.26.0"
-  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
-  integrity sha1-N5k3q8Z9eJWXCtxiHyhM2WbPIVM=
-  dependencies:
-    babel-runtime "^6.26.0"
-    core-js "^2.5.0"
-    regenerator-runtime "^0.10.5"
-
-babel-runtime@6.26.0, babel-runtime@^6.26.0:
+babel-runtime@6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -359,7 +398,7 @@ cookiejar@^2.1.1:
   resolved "https://registry.yarnpkg.com/cookiejar/-/cookiejar-2.1.2.tgz#dd8a235530752f988f9a0844f3fc589e3111125c"
   integrity sha512-Mw+adcfzPxcPeI+0WlvRrr/3lGVO0bD75SxX6811cxSh1Wbxx7xZBGK1eVtDf6si8rg2lhnUjsVLMFMfbRIuwA==
 
-core-js@^2.4.0, core-js@^2.5.0:
+core-js@^2.4.0:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
   integrity sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==
@@ -912,32 +951,6 @@ isomorphic-fetch@^2.2.1:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
 
-js-coin-eth@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/js-coin-eth/-/js-coin-eth-0.0.4.tgz#0d5226b113a51208fc168ed3277e3d36ef361cd4"
-  integrity sha512-txOqDwMNvNBR+5EEnJE4imbzDT9BmWZL42t+WpRkerheeudDtFv87Jtf2qwO8+6mojAgDfTHlfwaGZkBuIIP6A==
-  dependencies:
-    "@parity/api" "^4.0.3"
-    bitcore-lib "^0.16.0"
-    bn.js "^4.11.8"
-    eth-crypto "^1.3.3"
-    ethereumjs-tx "^1.3.7"
-    ethereumjs-util "^6.1.0"
-    js-httprequest "^0.0.4"
-    js-node-assist "^0.5.8"
-    keythereum "^1.0.4"
-    p-js-error "^0.0.4"
-    web3 "^1.0.0-beta.46"
-
-js-httprequest@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/js-httprequest/-/js-httprequest-0.0.4.tgz#3b9956b44064b6c9a87a97373931778a738d1b45"
-  integrity sha512-w09kTAMW8XqIzeJoRImzNd7UsWZ0mnNgE2zR0x2S87rtTK8/exunN69d1/LFlPE4VHve8pGebWG31bi0Ai6zEA==
-  dependencies:
-    js-node-assist "^0.5.8"
-    p-js-error "^0.0.4"
-    restler "^3.4.0"
-
 js-node-assist@^0.5.8:
   version "0.5.8"
   resolved "https://registry.yarnpkg.com/js-node-assist/-/js-node-assist-0.5.8.tgz#02f8a5d9d541eb4f4cc3edfc783af65e219a393d"
@@ -1121,11 +1134,6 @@ p-js-error@^0.0.4:
   resolved "https://registry.yarnpkg.com/p-js-error/-/p-js-error-0.0.4.tgz#ae7dbba4f998576012bb818227961b7961cc9902"
   integrity sha512-voF6p/u1QP+7UMMqZLucmnXHN5JncAvyeKjlvGVRQ9HuFhIL/RBxZ0gN0g1UXaRNdsOorWNfnNHuTGKNMN7toA==
 
-p-js-utils@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/p-js-utils/-/p-js-utils-0.0.8.tgz#7d19bb906a21b1fe3df5b3a6106266b882fc2130"
-  integrity sha512-mco/9jDrugGISgSWQN8MW2dsb6iQjccPR58c07q8YBgz9MI+YLnre5ayOtKDlzILy20fNNWOb+0L2NtpIktqCw==
-
 parse-asn1@^5.0.0:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/parse-asn1/-/parse-asn1-5.1.4.tgz#37f6628f823fbdeb2273b4d540434a22f3ef1fcc"
@@ -1222,11 +1230,6 @@ randomfill@^1.0.3:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
-
-regenerator-runtime@^0.10.5:
-  version "0.10.5"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
-  integrity sha1-M2w+/BIgrc7dosn6tntaeVWjNlg=
 
 regenerator-runtime@^0.11.0:
   version "0.11.1"
