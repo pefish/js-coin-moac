@@ -1,5 +1,5 @@
-import 'js-node-assist';
-import EthWalletHelper from 'js-coin-eth/lib/wallet';
+import '@pefish/js-node-assist';
+import EthWalletHelper from '@pefish/js-coin-eth/lib/wallet';
 import Chain3 from 'chain3';
 declare global {
     namespace NodeJS {

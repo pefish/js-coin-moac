@@ -1,6 +1,6 @@
 {
   "name": "@pefish/js-coin-moac",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "moac tool of js",
   "keywords": [
     "common",
@@ -20,9 +20,10 @@
     "url": "https://github.com/pefish/js-coin-moac"
   },
   "scripts": {
-    "build": "tsc && yarn tslint",
+    "build": "rm -rf lib types && tsc && yarn tslint",
     "test": "mocha --timeout 6000 --require ts-node/register src/**/*.test.ts",
-    "tslint": "tslint -c tslint.json -p tsconfig.json"
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
