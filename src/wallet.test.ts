@@ -1,6 +1,7 @@
 import '@pefish/js-node-assist'
 import assert from 'assert'
 import EthWalletHelper from './wallet'
+import rpl from 'chain3/lib/accounts/rlp'
 
 declare global {
   namespace NodeJS {
@@ -66,6 +67,17 @@ describe('EthWalletHelper', () => {
       const result = walletHelper.deriveAllByXprivPath(xpriv, `m/44'/60'/0'/0/2/16`)
       // global.logger.error(xpriv, result)
       assert.strictEqual(result['address'], '0xc2ff9108b104f1ab4c780b5ca31422ba20ac1b47')
+    } catch (err) {
+      global.logger.error(err)
+      assert.throws(() => {}, err)
+    }
+  })
+
+  it('decodeTxHex', async () => {
+    try {
+      const result = rpl.decode('0xf8af81b0808502540be400830249f0944c6007cea426e543551f2cb6392e6d6768f7470680b844a9059cbb00000000000000000000000009bb1dd637cafdcda27579a3786840e39e49659f0000000000000000000000000000000000000000000005150ae84a8cdf000000808081eaa000dbe56b2d9570a955028d0389cd875d9bdd151242c2212a0c5157536e5eac8da01d7b9066ce2c446e9779d768e7ee5532c87fecb431706eed8db2f4ab7c1faefd')
+      global.logger.error(result)
+      // assert.strictEqual(result['address'], '0xc2ff9108b104f1ab4c780b5ca31422ba20ac1b47')
     } catch (err) {
       global.logger.error(err)
       assert.throws(() => {}, err)

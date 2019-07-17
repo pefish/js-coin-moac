@@ -13,7 +13,7 @@ export default class WalletHelper extends EthWalletHelper {
     chain3: Chain3;
     constructor();
     buildTransaction(privateKey: string, toAddress: string, amount: string, nonce: number, gasPrice?: string, gasLimit?: string): object;
-    buildContractTransaction(privateKey: any, contractAddress: any, methodName: any, methodParamTypes: any, params: any, nonce: number, gasPrice?: any, gasLimit?: any, abi?: string): {
+    buildContractTransaction(privateKey: any, contractAddress: any, methodName: any, methodParamTypes: any, params: any, nonce: number, gasPrice?: any, gasLimit?: any): {
         txHex: any;
         txId: string;
     };

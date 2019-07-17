@@ -337,10 +337,10 @@ builtin-modules@^1.1.1:
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
   integrity sha1-Jw8HbFpywC9bZaR9+Uxf46J4iS8=
 
-chain3@^0.1.18:
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/chain3/-/chain3-0.1.18.tgz#2a1af1c5b4a1fdc249a1a0db3442ca2d057fb20a"
-  integrity sha512-o2BhP++lysq9CRfD7940olv0u5Pwy5txH+wfkJZ5HcvM/wRgZae+SCZeWQpT0QPP5eEba3gmRZl+hHNwVVbPTQ==
+chain3@^0.1.19:
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/chain3/-/chain3-0.1.19.tgz#66b529d5faa47e25c8139a0f3139853418b1e5c1"
+  integrity sha512-TK9sZ4w1xF9NB7gUD2AJCulbQJmV1UPY1DmXPZTY9v1Nqvl8yNeCy2ojuESXyC2nVoVLth5Fljwm/wLyVN0dag==
   dependencies:
     base-x "^3.0.5"
     bignumber.js "^8.1.1"
