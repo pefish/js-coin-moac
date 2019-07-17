@@ -2,6 +2,7 @@ import '@pefish/js-node-assist'
 import EthWalletHelper from '@pefish/js-coin-eth/lib/wallet'
 import Chain3 from 'chain3'
 import * as utils from 'ethereumjs-util'
+import SigUtil from "./util/sig_utils";
 
 declare global {
   namespace NodeJS {
@@ -35,7 +36,7 @@ export default class WalletHelper extends EthWalletHelper {
       to: toAddress,
       value: amount.decimalToHexString_(),
     }
-    const signedTxHex = this.chain3.signTransaction(rawTx, privateKey)
+    const signedTxHex = SigUtil.signTransaction(rawTx, privateKey)
     return {
       txHex: signedTxHex,
       txId: utils.keccak(signedTxHex).toHexString_(true),
@@ -89,11 +90,13 @@ export default class WalletHelper extends EthWalletHelper {
       data: contract.transfer.getData(params[0].toLowerCase(), params[1])
     }
 
-    const signedTxHex = this.chain3.signTransaction(rawTx, privateKey)
+    const signedTxHex = SigUtil.signTransaction(rawTx, privateKey)
     return {
       txHex: signedTxHex,
       txId: utils.keccak(signedTxHex).toHexString_(true),
     }
   }
+
+
 }
 
