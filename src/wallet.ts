@@ -1,19 +1,10 @@
 import '@pefish/js-node-assist'
-import EthWalletHelper from '@pefish/js-coin-eth/lib/wallet'
+import { EthWallet } from '@pefish/js-coin-eth'
 import Chain3 from 'chain3'
 import * as utils from 'ethereumjs-util'
 import SigUtil from "./util/sig_utils";
 
-declare global {
-  namespace NodeJS {
-    interface Global {
-      logger: any;
-    }
-  }
-}
-
-export default class WalletHelper extends EthWalletHelper {
-  [x: string]: any;
+export default class WalletHelper extends EthWallet {
   chain3: Chain3
 
   public constructor() {
@@ -21,7 +12,7 @@ export default class WalletHelper extends EthWalletHelper {
     this.chain3 = new Chain3(new Chain3.providers.HttpProvider(``))
   }
 
-  buildTransaction(privateKey: string, toAddress: string, amount: string, nonce: number, gasPrice: string = null, gasLimit: string = '21000'): object {
+  buildTransaction(privateKey: string, toAddress: string, amount: string, nonce: number, gasPrice: string = '20000000000', gasLimit: string = '21000'): any {
     if (privateKey.startsWith('0x')) {
       privateKey = privateKey.substring(2, privateKey.length)
     }
@@ -43,7 +34,7 @@ export default class WalletHelper extends EthWalletHelper {
     }
   }
 
-  buildContractTransaction(privateKey, contractAddress, methodName, methodParamTypes, params, nonce: number, gasPrice = null, gasLimit = null) {
+  buildContractTransaction(privateKey: string, contractAddress: string, methodName, methodParamTypes, params, nonce: number, gasPrice = null, gasLimit = null): any {
     const fromAddress = this.getAddressFromPrivateKey(privateKey)
     if (privateKey.startsWith('0x')) {
       privateKey = privateKey.substring(2, privateKey.length)
