@@ -51,10 +51,10 @@
     store "^2.0.12"
     websocket "^1.0.25"
 
-"@pefish/js-coin-eth@^0.2.5":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@pefish/js-coin-eth/-/js-coin-eth-0.2.5.tgz#7300cda6a74beb31038ef376137e2412b97fc554"
-  integrity sha512-3BqjwClxykPFwuN0ZkRBm9y6g/Q956RB+rm5pAKzmXors6ABL1mnvBAVrPdgUlZtTnASVvizfVQtMed3JZ5sMw==
+"@pefish/js-coin-eth@^0.2.8":
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/@pefish/js-coin-eth/-/js-coin-eth-0.2.8.tgz#2c24dfddd22e0120f33fa6e69501ab4e9a8152a2"
+  integrity sha512-lKStVc96nF2r1lj4jHGvVTidPJLgPrxdoM+SU2h8Jz3/B7Rn/haebzmajNzeDE0dm1xWlit2eO480vVGSQ0FjQ==
   dependencies:
     "@parity/api" "^5.1.13"
     "@pefish/js-error" "^0.1.1"

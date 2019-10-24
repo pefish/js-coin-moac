@@ -1,6 +1,6 @@
 {
   "name": "@pefish/js-coin-moac",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "moac tool of js",
   "keywords": [
     "common",
@@ -35,7 +35,7 @@
     "typescript": "^3.4.5"
   },
   "dependencies": {
-    "@pefish/js-coin-eth": "^0.2.5",
+    "@pefish/js-coin-eth": "^0.2.8",
     "@pefish/js-error": "^0.1.2",
     "@pefish/js-node-assist": "^0.6.11",
     "chain3": "^0.1.19",
